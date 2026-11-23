@@ -1,44 +1,70 @@
-# Uber Request Data Analysis: Supply-Demand Gap
+Uber Ride Request Analysis: Supply-Demand Gap
 
-## Objective
-Identify when and where Uber fails to fulfil ride requests (cancellations and
-"no cars available") and recommend ways to close the supply-demand gap.
+Problem Statement
 
-## Dataset
-Kaggle "Uber Request Data" schema: Request id, Pickup point (City/Airport),
-Driver id, Status, Request timestamp, Drop timestamp.
-> Place the real `Uber Request Data.csv` in this folder before running.
-> If it is absent, the script generates a synthetic dataset with the same schema.
+Uber loses revenue and rider trust when ride requests fail. Requests from the
+City and the Airport often end as Cancelled or No Cars Available.
+This project finds when and where these failures happen and why.
 
-## Tools
+Solution
+
+I analysed ride request data in Python to:
+
+	•	Clean and standardise mixed timestamp formats
+	•	Create features: hour of day, time slot, trip duration, failure flag
+	•	Compare demand vs completed trips (the supply-demand gap) by pickup point and time slot
+	•	Recommend ways to reduce failed requests
+
+Tech Stack
+
 Python, Pandas, NumPy, Matplotlib, Seaborn
 
-## Method
-1. Data cleaning: mixed date formats, duplicates, expected nulls
-2. Feature engineering: hour, time slot, trip duration, failure flag
-3. EDA: status mix, hourly demand, status by hour and slot, trip duration
-4. Gap analysis: demand minus completed trips per pickup point and slot
-5. Insights and recommendations
+Dataset
 
-## Key Findings (on bundled synthetic data; re-check with real data)
-- ~60% of requests completed; ~40% fail.
-- City, early morning: highest cancellations.
-- Airport, evening rush: highest "No Cars Available", the largest gap.
+Uses the Kaggle "Uber Request Data" schema (Request id, Pickup point, Driver id,
+Status, Request timestamp, Drop timestamp). The data in this repo is a
+synthetic sample with the same schema, so results are illustrative.
+The script also works with the real Kaggle file.
 
-## Recommendations
-- Driver incentives for morning city-to-airport trips
-- Surge pricing and driver pre-positioning at the airport in the evening
-- Airport queue/holding-lot alerts; penalties for repeat cancellations
-## Charts
+Screenshots
 
-![Chart 1](IMG_4024.png)
+Failure rate by time slot and pickup point
 
-![Chart 2](IMG_4025.png)
+Request status by hour
 
+Key Findings
 
-## Run
-```
-pip install pandas numpy matplotlib seaborn
-python uber_analysis.py
-```
-Outputs: `charts/`, `cleaned_uber_data.csv`, `insights.txt`
+	•	About 60% of requests complete; about 40% fail.
+	•	City pickups in the early morning (4-9) have the most cancellations.
+	•	Airport pickups in the evening rush (17-22) have the most "No Cars Available" and the largest gap.
+
+Recommendations
+
+	•	Give drivers incentives for morning city-to-airport trips
+	•	Use surge pricing and pre-position drivers at the airport in the evening
+	•	Send airport queue / holding-lot alerts to idle drivers
+	•	Penalise repeat driver cancellations
+
+Setup Steps
+
+	1.	Install Python 3.9+
+	2.	pip install pandas numpy matplotlib seaborn
+	3.	Download uber_analysis.py
+	4.	(Optional) Put the real Uber Request Data.csv in the same folder
+	5.	Run python uber_analysis.py
+
+Outputs: charts, cleaned_uber_data.csv, insights.txt
+
+Live Link
+
+Run it online: ADD_YOUR_GOOGLE_COLAB_LINK_HERE
+
+Conclusion
+
+Failures are concentrated in two windows: city mornings (driver cancellations)
+and airport evenings (not enough cars). Targeted driver incentives and
+pricing in these windows would close most of the gap.
+
+Author
+
+Rashiii11
