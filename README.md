@@ -66,7 +66,7 @@ Outputs: charts, cleaned_uber_data.csv, insights.txt
 
 Live Link
 
-Run it online: ADD_YOUR_GOOGLE_COLAB_LINK_HERE
+Run it online: https://colab.research.google.com/drive/1bmSRbpCHAk0CScIZYSCollNVz3tIN-p5
 
 Conclusion
 
