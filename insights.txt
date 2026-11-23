@@ -1,0 +1,19 @@
+UBER SUPPLY-DEMAND GAP: KEY INSIGHTS
+====================================
+Total requests analysed : 6,500
+Trips completed         : 59.6%
+Cancelled               : 17.8%
+No cars available       : 22.6%
+Avg trip duration       : 52 min
+
+1. Most cancellations: City pickups in Early Morning (4-9).
+   Drivers likely cancel city->airport trips (long, low return trip demand).
+2. Most 'No Cars Available': Airport pickups in Evening Rush (17-22).
+   Demand from arriving passengers exceeds cars waiting at the airport.
+3. Largest absolute gap: Airport / Evening Rush (17-22) (1095 unfulfilled requests).
+
+RECOMMENDATIONS
+- Incentivise drivers (bonus / guaranteed fare) for city->airport morning trips to cut cancellations.
+- Surge pricing + pre-positioning of drivers near the airport during evening rush.
+- Airport holding-lot / queue notifications so idle drivers know when demand spikes.
+- Show riders honest ETAs and penalise repeat driver cancellations.
