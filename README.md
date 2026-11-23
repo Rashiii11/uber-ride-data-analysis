@@ -29,6 +29,12 @@ Python, Pandas, NumPy, Matplotlib, Seaborn
 - Driver incentives for morning city-to-airport trips
 - Surge pricing and driver pre-positioning at the airport in the evening
 - Airport queue/holding-lot alerts; penalties for repeat cancellations
+## Charts
+
+![Chart 1](IMG_4024.png)
+
+![Chart 2](IMG_4025.png)
+
 
 ## Run
 ```
