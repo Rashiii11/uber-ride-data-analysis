@@ -27,6 +27,13 @@ synthetic sample with the same schema, so results are illustrative.
 The script also works with the real Kaggle file.
 
 Screenshots
+## Charts
+
+![Chart 1](IMG_4024.png)
+
+![Chart 2](IMG_4025.png)
+
+
 
 Failure rate by time slot and pickup point
 
@@ -52,6 +59,8 @@ Setup Steps
 	3.	Download uber_analysis.py
 	4.	(Optional) Put the real Uber Request Data.csv in the same folder
 	5.	Run python uber_analysis.py
+
+
 
 Outputs: charts, cleaned_uber_data.csv, insights.txt
 
